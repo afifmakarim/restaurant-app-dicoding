@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html {
+    scroll-behavior: smooth;
+  }
+
+img {
+    display: block;
+}
+
+body, p{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding-right: 25px;
+    padding-left: 25px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.highlight-container {
+    padding-right: 50px;
+    padding-left: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+}
+
+.highlight-container p {
+    text-align: center;
+}
+
+.btn-primary {
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 8px;
+    background: #ff7c57;
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ff7c57;
+}
+
+.navbar .logo {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-size: 12pt;
+    color: #fff;
+}
+
+.navbar a:hover{
+    color: #eee;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    width: 30%;
+    justify-content: space-between;
+}
+
+.jumbotron {
+    width: 100%;
+}
+
+.jumbotron img {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    filter: sepia(8%) brightness(50%) contrast(103%);
+    -webkit-filter: sepia(8%) brightness(50%) contrast(103%);
+    -moz-filter: sepia(8%) brightness(50%) contrast(103%);
+}
+
+.jumbotron .description {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    padding: 45px;
+    color: #fff;
+    align-items: center;
+    align-content: center;
+    transform: translate(-50%, -50%);
+}
+
+.jumbotron .description h1 {
+    font-size: 60pt;
+}
+
+.jumbotron .description p {
+    margin: 20px;
+
+}
+
+.section-title {
+    text-align: center;
+    margin: 25px;
+}
+
+.card {
+    position: relative;
+    border: 1px solid #eee;
+}
+
+.card .badge {
+    position: absolute;
+    top: 0;
+    padding: 10px;
+    background: #ff7c57;
+    color: #fff;
+}
+
+.card img {
+    width: 100%;
+    height: 300px;
+}
+
+.card-content{
+    padding: 25px;
+    
+}
+
+.card-content h4 {
+    margin: 15px 0 ;
+}
+
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 50px 25px;
+}
+
+footer {
+    margin-top:20px;
+    text-align: center;
+    background: #ff7c57;
+    padding: 15px;
+    color: #eee;
+    font-size: 10pt;
+}
+
+.toggle {
+    display: none;
+}
+
+.active {
+    display: flex !important;
+}
+
+.span {
+    display: grid;
+    justify-items: center;
+}
+
+/* tablet */
+@media screen and (max-width:768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 1em;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        display: none;
+    }
+
+    .jumbotron .description h1 {
+        font-size: 30pt;
+    }
+
+    .jumbotron .description {
+        align-items: center;
+        align-content: center;
+        padding: 5px;
+        top: 65%;
+    }
+
+    .grid-wrapper {
+        gap: 25px;
+    }
+
+}
+
+/* mobile */ 
+@media screen and (max-width: 576px) {
+    .jumbotron .description h1 {
+        font-size: 25pt;
+    }
+
+    .jumbotron .description {
+        align-items: center;
+        align-content: center;
+        padding: 5px;
+        width: 320px;
+    }
+}
