@@ -44,21 +44,24 @@ body, p{
     color: #fff;
 }
 
-.navbar {
+/* navbar */
+
+#drawer {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     background: #ff7c57;
-}
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
 
 .navbar .logo {
     font-weight: bold;
-    font-size: 20px;
+    font-size: 12pt;
 }
 
 .navbar a {
     text-decoration: none;
-    font-size: 12pt;
+    font-size: 10pt;
     color: #fff;
 }
 
@@ -66,12 +69,12 @@ body, p{
     color: #eee;
 }
 
-.navbar ul {
-    display: flex;
+#drawer ul {
     list-style: none;
-    width: 30%;
-    justify-content: space-between;
-}
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+  }
 
 .jumbotron {
     width: 100%;
@@ -92,11 +95,12 @@ body, p{
     position: absolute;
     top: 55%;
     left: 50%;
-    padding: 45px;
+    padding: 1.2em;
     color: #fff;
     align-items: center;
     align-content: center;
     transform: translate(-50%, -50%);
+
 }
 
 .jumbotron .description h1 {
@@ -105,7 +109,7 @@ body, p{
 
 .jumbotron .description p {
     margin: 20px;
-
+    font-size: 14pt;
 }
 
 .section-title {
@@ -155,9 +159,9 @@ footer {
     font-size: 10pt;
 }
 
-.toggle {
+#hamburger {
     display: none;
-}
+  }
 
 .active {
     display: flex !important;
@@ -168,29 +172,91 @@ footer {
     justify-items: center;
 }
 
+.social-media {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 25px;
+    font-size: 50px;
+  }
+
+  .social-media a {
+    color: #fff;
+  }
+
+  footer {
+    font-size: 8pt;
+    background-color: #ff7c57;
+    text-align: center;
+    color: #fff;
+  }
+
+  footer p {
+    margin: 20px;
+  }
+  
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: red;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+ }
+
+ .skip-link:focus {
+    top: 0;
+ }
+
 /* tablet */
 @media screen and (max-width:768px) {
-    .navbar {
-        flex-direction: column;
-        padding: 1em;
-    }
-
-    .navbar ul {
-        flex-direction: column;
-        align-items: center;
-        align-content: center;
+    
+    #hamburger {
+        display: flex;
+        width: 50%
+      }
+    
+      #drawer ul {
         display: none;
-    }
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    
+      #drawer ul li {
+        display: list-item;
+        border-bottom: 1px solid #eee;
+        width: 100%;
+        text-align: left;
+        padding:5px;
+      }
+    
+      #drawer {
+        padding: 1em;
+        justify-content: space-around;
+        transition: transform 0.3s ease;
+        position: relative;
+      }
+    
+      #drawer .logo{
+        width: 50%;
+        align-items: center;
+      }
+
 
     .jumbotron .description h1 {
-        font-size: 30pt;
+        font-size: 32pt;
+    }
+
+    .jumbotron .description p {
+        display: none;
     }
 
     .jumbotron .description {
         align-items: center;
         align-content: center;
         padding: 5px;
-        top: 65%;
+        top: 70%;
     }
 
     .grid-wrapper {
@@ -201,9 +267,9 @@ footer {
 
 /* mobile */ 
 @media screen and (max-width: 576px) {
-    .jumbotron .description h1 {
+    /* .jumbotron .description h1 {
         font-size: 25pt;
-    }
+    } */
 
     .jumbotron .description {
         align-items: center;
@@ -211,4 +277,5 @@ footer {
         padding: 5px;
         width: 320px;
     }
+    
 }
