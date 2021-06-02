@@ -56,12 +56,12 @@ body, p{
 
 .navbar .logo {
     font-weight: bold;
-    font-size: 12pt;
+    font-size: 32px;
 }
 
 .navbar a {
     text-decoration: none;
-    font-size: 10pt;
+    font-size: 32px;
     color: #fff;
 }
 
@@ -73,7 +73,7 @@ body, p{
     list-style: none;
     display: flex;
     justify-content: space-evenly;
-    width: 50%;
+    width: 40%;
   }
 
 .jumbotron {
@@ -176,7 +176,7 @@ footer {
     display: flex;
     justify-content: space-evenly;
     padding: 25px;
-    font-size: 50px;
+    font-size: 55px;
   }
 
   .social-media a {
@@ -209,7 +209,7 @@ footer {
  }
 
 /* tablet */
-@media screen and (max-width:768px) {
+@media screen and (max-width:800px) {
     
     #hamburger {
         display: flex;
@@ -270,6 +270,10 @@ footer {
     /* .jumbotron .description h1 {
         font-size: 25pt;
     } */
+
+    .grid-wrapper {
+        grid-template-columns: 1fr;
+    }
 
     .jumbotron .description {
         align-items: center;
